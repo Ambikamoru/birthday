@@ -1,0 +1,206 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>A Birthday Full of Love 💗</title>
+<style>
+*{box-sizing:border-box}
+body{
+ margin:0;font-family:Georgia,serif;text-align:center;color:#8b315b;
+ background:linear-gradient(135deg,#fff0f5,#ffd6e7,#fff7fb);
+ overflow-x:hidden
+}
+section{padding:55px 18px;position:relative}
+.hero{min-height:100vh;display:flex;flex-direction:column;
+ align-items:center;justify-content:center}
+h1{font-size:clamp(2.4rem,8vw,5rem);margin:12px 0;color:#d63384}
+h2{color:#c12c73;font-size:2rem}
+p{line-height:1.8;font-size:1.08rem}
+.script{font-style:italic}
+.heart{font-size:2rem;animation:pulse 1.3s infinite}
+@keyframes pulse{50%{transform:scale(1.25)}}
+.petal{position:fixed;top:-30px;z-index:5;pointer-events:none;
+ animation:fall linear forwards}
+@keyframes fall{to{transform:translateY(110vh) rotate(600deg);opacity:.2}}
+.card{max-width:700px;margin:20px auto;padding:28px;
+ background:#ffffffb8;border:1px solid #fff;border-radius:25px;
+ box-shadow:0 10px 35px #c44b7930}
+.timer{display:flex;justify-content:center;gap:10px;flex-wrap:wrap}
+.time{background:#fff;border-radius:15px;padding:15px;
+ min-width:75px;box-shadow:0 4px 15px #c44b7920}
+.time strong{display:block;font-size:1.8rem;color:#d63384}
+button{border:0;border-radius:30px;padding:14px 24px;
+ background:#d63384;color:white;font-size:1rem;cursor:pointer;
+ box-shadow:0 5px 15px #d6338450;margin:8px}
+button:hover{transform:translateY(-2px)}
+.cake{font-size:6rem;line-height:1.2;margin:20px 0}
+#surprise{display:none;animation:appear 1s ease}
+@keyframes appear{from{opacity:0;transform:translateY(20px)}
+ to{opacity:1;transform:translateY(0)}}
+.wishes{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));
+ gap:14px;max-width:850px;margin:auto}
+.wish{padding:20px;background:#fff9fc;border-radius:18px;
+ box-shadow:0 5px 18px #b8327020}
+footer{padding:30px;color:#b04476}
+</style>
+</head>
+<body>
+
+<section class="hero">
+ <div class="heart">💗 🌸 💗</div>
+ <p class="script">A little world of love, made just for you</p>
+ <h1>Happy Birthday!</h1>
+ <p class="script">A special day for a truly special soul ✨</p>
+ <div class="card">
+  <h2>🎀 Your Birthday Countdown 🎀</h2>
+  <p>Until September 3, 2027</p>
+  <div class="timer">
+   <div class="time"><strong id="days">00</strong>Days</div>
+   <div class="time"><strong id="hours">00</strong>Hours</div>
+   <div class="time"><strong id="mins">00</strong>Minutes</div>
+   <div class="time"><strong id="secs">00</strong>Seconds</div>
+  </div>
+ </div>
+ <button onclick="document.querySelector('#cake').scrollIntoView({behavior:'smooth'})">
+  Open Your Surprise 💝
+ </button>
+ <p>🌷 🌹 🦋 🌷 🌹</p>
+</section>
+
+<section id="cake">
+ <h2>🎂 A Cake Filled With Love 🎂</h2>
+ <p class="script">Make a wish, close your eyes, and let the magic begin!</p>
+ <div class="cake" id="cakeArt">🎂</div>
+ <p id="caption">🕯️ Three little wishes, one beautiful birthday!</p>
+ <button id="blow" onclick="blowCandles()">💨 Blow the Candles!</button>
+ <div id="surprise" class="card">
+  <h2>🎉 SURPRISE! 🎉</h2>
+  <div style="font-size:3rem">🌹💖🌸💗🌹</div>
+  <p class="script">
+   Surprise, birthday star! ✨<br>
+   Every candle you blow away sends a little wish
+   into the universe just for you.<br>
+   May your dreams come true, your heart stay happy,
+   and your life overflow with love!
+  </p>
+  <h2>💋 Sending you a million hugs & kisses!</h2>
+ </div>
+</section>
+
+<section>
+ <h2>💌 A Beautiful Birthday Message 💌</h2>
+ <div class="card">
+  <p class="script">
+   On your special day, I wish I could wrap the whole world
+   in pink ribbons, fill the sky with roses, and give you
+   every beautiful thing your heart has ever dreamed of. 🌸
+  </p>
+  <p>
+   You deserve mornings filled with sunshine, nights filled
+   with peaceful dreams, people who love you sincerely,
+   and a thousand little reasons to smile every single day.
+  </p>
+  <p class="script">
+   May this new chapter bring you unexpected happiness,
+   beautiful opportunities, endless courage, good health,
+   true friendships, and memories that make your heart glow.
+   Never forget how precious and wonderful you are. 💗
+  </p>
+  <h2>Happy Birthday, Beautiful! 🌷</h2>
+  <p>May your life always bloom like a garden in spring.</p>
+ </div>
+</section>
+
+<section>
+ <h2>🌷 Wishes From the Heart 🌷</h2>
+ <div class="wishes">
+  <div class="wish">🌸 <h3>Endless Happiness</h3>
+   May your smile shine brighter than a thousand stars.</div>
+  <div class="wish">💖 <h3>True Love</h3>
+   May you always be surrounded by love that feels safe and real.</div>
+  <div class="wish">🌟 <h3>Dreams Come True</h3>
+   May every little dream find its way into your life.</div>
+  <div class="wish">🦋 <h3>Beautiful New Beginnings</h3>
+   May every new chapter bring growth, courage, and wonder.</div>
+  <div class="wish">🌹 <h3>Good Health</h3>
+   May your days be filled with strength, peace, and wellness.</div>
+  <div class="wish">🎁 <h3>Wonderful Surprises</h3>
+   May life surprise you with blessings when you least expect them.</div>
+  <div class="wish">☀️ <h3>Bright Tomorrows</h3>
+   May even your hardest days end with a little hope.</div>
+  <div class="wish">💎 <h3>Know Your Worth</h3>
+   Never settle for less than the kindness and respect you deserve.</div>
+  <div class="wish">🌈 <h3>Magical Memories</h3>
+   May you collect moments that you'll treasure forever.</div>
+  <div class="wish">🕊️ <h3>Peace of Heart</h3>
+   May your heart always find calm, comfort, and contentment.</div>
+  <div class="wish">🍀 <h3>Good Fortune</h3>
+   May wonderful opportunities find you again and again.</div>
+  <div class="wish">🎀 <h3>A Year of Magic</h3>
+   May this be your most beautiful, memorable year yet!</div>
+ </div>
+</section>
+
+<section>
+ <div class="card">
+  <div style="font-size:3rem">🌸💗🎂💗🌸</div>
+  <h2>One Last Wish...</h2>
+  <p class="script">
+   If I could give you one gift, it would be the ability
+   to see yourself through the eyes of everyone who loves you.
+   Then you would understand just how special you truly are.
+  </p>
+  <h1 style="font-size:2.5rem">Stay Blessed & Keep Smiling! 💕</h1>
+  <p>Made with love, pink dreams, and a thousand wishes. 🌷</p>
+ </div>
+</section>
+
+<footer>🌸 With all my love, today and always. 🌸</footer>
+
+<script>
+const target = new Date(2027, 8, 3, 0, 0, 0);
+
+function updateTimer(){
+ const diff = target.getTime() - Date.now();
+ if(diff <= 0){
+  document.querySelector(".timer").innerHTML =
+   "<h2>🎉 It's your special day! 🎉</h2>";
+  return;
+ }
+ document.getElementById("days").textContent =
+  Math.floor(diff/86400000);
+ document.getElementById("hours").textContent =
+  Math.floor(diff%86400000/3600000);
+ document.getElementById("mins").textContent =
+  Math.floor(diff%3600000/60000);
+ document.getElementById("secs").textContent =
+  Math.floor(diff%60000/1000);
+}
+updateTimer();
+setInterval(updateTimer,1000);
+
+function blowCandles(){
+ document.getElementById("cakeArt").textContent="🎂💨✨";
+ document.getElementById("caption").textContent=
+  "✨ Wish made! Let the birthday magic begin! ✨";
+ document.getElementById("surprise").style.display="block";
+ document.getElementById("blow").textContent="💖 Surprise Unlocked!";
+ document.getElementById("blow").disabled=true;
+ for(let i=0;i<45;i++){
+  setTimeout(()=>{
+   const p=document.createElement("div");
+   p.className="petal";
+   p.textContent=["🌸","💗","🌹","✨","💕"][Math.floor(Math.random()*5)];
+   p.style.left=Math.random()*100+"vw";
+   p.style.animationDuration=(3+Math.random()*4)+"s";
+   p.style.fontSize=(15+Math.random()*20)+"px";
+   document.body.appendChild(p);
+   setTimeout(()=>p.remove(),7500);
+  },i*45);
+ }
+}
+</script>
+</body>
+</html>
